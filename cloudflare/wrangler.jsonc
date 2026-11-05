@@ -1,0 +1,17 @@
+{
+  // Publicar: `npx wrangler deploy` nesta pasta (precisa de `npx wrangler login`).
+  // Publicar É a troca: as rotas abaixo tiram /tiktok, /facebook, /story,
+  // /youtube e /direct da Hostinger. Para voltar: apagar a rota no painel da
+  // Cloudflare (Workers → grupo-site → Rotas) e o caminho volta para lá.
+  "name": "grupo-site",
+  "main": "worker.js",
+  "compatibility_date": "2026-11-01",
+  "routes": [
+    { "pattern": "centraldevoos.com/grupo*", "zone_name": "centraldevoos.com" },
+    { "pattern": "centraldevoos.com/tiktok*", "zone_name": "centraldevoos.com" },
+    { "pattern": "centraldevoos.com/facebook*", "zone_name": "centraldevoos.com" },
+    { "pattern": "centraldevoos.com/story*", "zone_name": "centraldevoos.com" },
+    { "pattern": "centraldevoos.com/youtube*", "zone_name": "centraldevoos.com" },
+    { "pattern": "centraldevoos.com/direct*", "zone_name": "centraldevoos.com" }
+  ]
+}
