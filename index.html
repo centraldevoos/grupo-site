@@ -17,7 +17,7 @@
   <meta property="og:image:height" content="180">
   <meta name="twitter:card" content="summary">
   <meta name="theme-color" content="#05070b">
-  <link rel="icon" href="logo.png" type="image/png">
+  <link rel="icon" href="logo-cdv.png" type="image/png">
 
   <!-- Leve: a foto do topo carrega primeiro, o CSS fica na página e não há JavaScript -->
   <link rel="preload" as="image" href="assets/images/hero-mobile.webp" media="(max-width: 760px)" fetchpriority="high">
@@ -29,7 +29,7 @@
     :root {
       --bg: #05070b; --panel: #0b1117; --line: rgba(246, 239, 231, .12);
       --text: #f6efe7; --muted: rgba(246, 239, 231, .74);
-      --gold: #ffc83d; --gold-claro: #ffe28a; --gold-escuro: #e9a31a; --on-gold: #1a1203;
+      --gold: #f0c15a; --gold-claro: #f6d995; --gold-escuro: #d49f3c; --on-gold: #1c1406;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
@@ -39,7 +39,7 @@
     .shell { width: min(1120px, 100% - 32px); margin-inline: auto; }
 
     /* Faixa da Black */
-    .faixa { position: relative; z-index: 2; background: linear-gradient(90deg, var(--gold-escuro), var(--gold) 30%, var(--gold-claro) 50%, var(--gold) 70%, var(--gold-escuro)); color: var(--on-gold); text-align: center; padding: 9px 12px; font-weight: 800; font-size: 13px; letter-spacing: .08em; text-transform: uppercase; }
+    .faixa { position: relative; z-index: 2; background: linear-gradient(90deg, var(--gold-escuro), var(--gold) 50%, var(--gold-escuro)); color: var(--on-gold); text-align: center; padding: 8px 12px; font-weight: 800; font-size: 12.5px; letter-spacing: .08em; text-transform: uppercase; }
 
     /* Topo: a mesma foto de hoje, com um banho dourado por cima */
     .hero { position: relative; overflow: hidden; isolation: isolate; }
@@ -47,29 +47,29 @@
     .hero__media img { width: 100%; height: 100%; object-fit: cover; object-position: center top; filter: brightness(.74) contrast(1.08); }
     .hero::before { content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none;
       background:
-        radial-gradient(60% 55% at 50% 38%, rgba(255, 186, 40, .16), transparent 70%),
+        radial-gradient(60% 55% at 50% 38%, rgba(240, 190, 90, .07), transparent 70%),
         linear-gradient(180deg, rgba(5, 7, 11, .45) 0%, rgba(5, 7, 11, .6) 40%, rgba(5, 7, 11, .8) 70%, var(--bg) 100%),
         linear-gradient(90deg, rgba(5, 7, 11, .9) 0%, rgba(5, 7, 11, .45) 50%, rgba(5, 7, 11, .15) 100%); }
     .hero__inner { display: flex; flex-direction: column; align-items: center; text-align: center; padding: 26px 0 96px; }
-    .brand img { width: 84px; filter: drop-shadow(0 12px 22px rgba(0, 0, 0, .45)); }
-    h1 { font-family: Sora, Manrope, sans-serif; font-weight: 800; font-size: clamp(30px, 4.6vw, 54px); line-height: 1.08; letter-spacing: -.03em; margin-top: 18px; max-width: 15em; text-wrap: balance; text-shadow: 0 4px 30px rgba(0, 0, 0, .55); }
+    .brand img { width: 76px; height: auto; filter: drop-shadow(0 10px 20px rgba(0, 0, 0, .5)); }
+    h1 { font-family: Sora, Manrope, sans-serif; font-weight: 800; font-size: clamp(30px, 4.6vw, 54px); line-height: 1.08; letter-spacing: -.03em; margin-top: 24px; max-width: 15em; text-wrap: balance; text-shadow: 0 4px 30px rgba(0, 0, 0, .55); }
     h1 span { color: var(--gold); }
     .hero__copy p { color: var(--muted); font-size: 19px; margin: 16px auto 0; max-width: 32em; text-wrap: pretty; }
-    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 60px; padding: 0 38px; border-radius: 14px; font-weight: 800; font-size: 18px; white-space: nowrap; background: linear-gradient(180deg, var(--gold-claro), var(--gold) 55%, var(--gold-escuro)); color: var(--on-gold); box-shadow: 0 12px 36px -10px rgba(255, 190, 40, .8); transition: transform .2s ease, box-shadow .2s ease; }
-    .btn:hover { transform: translateY(-2px); box-shadow: 0 18px 42px -10px rgba(255, 190, 40, .95); }
+    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 60px; padding: 0 38px; border-radius: 14px; font-weight: 800; font-size: 18px; white-space: nowrap; background: linear-gradient(180deg, var(--gold-claro), var(--gold) 55%, var(--gold-escuro)); color: var(--on-gold); box-shadow: 0 10px 28px -12px rgba(240, 190, 90, .55); transition: transform .2s ease, box-shadow .2s ease; }
+    .btn:hover { transform: translateY(-2px); box-shadow: 0 14px 34px -12px rgba(240, 190, 90, .7); }
     .btn:active { transform: translateY(1px); }
     .btn svg { width: 20px; height: 20px; flex: none; }
     .btn--pulse { animation: pulsa 2.4s ease-in-out infinite; }
-    @keyframes pulsa { 50% { box-shadow: 0 12px 48px -6px rgba(255, 190, 40, 1); } }
+    @keyframes pulsa { 50% { box-shadow: 0 10px 36px -10px rgba(240, 190, 90, .75); } }
     .hero .btn { margin-top: 28px; }
     .finds { margin-top: 34px; }
     .finds h2 { font-size: 13.5px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
     .finds ul { list-style: none; display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 12px; }
-    .finds li { display: inline-flex; align-items: center; gap: 8px; padding: 9px 15px; border-radius: 10px; background: rgba(8, 10, 14, .55); border: 1px solid rgba(255, 200, 61, .32); backdrop-filter: blur(6px); font-weight: 800; font-size: 15.5px; font-variant-numeric: tabular-nums; }
+    .finds li { display: inline-flex; align-items: center; gap: 8px; padding: 9px 15px; border-radius: 10px; background: rgba(8, 10, 14, .55); border: 1px solid rgba(240, 193, 90, .22); backdrop-filter: blur(6px); font-weight: 800; font-size: 15.5px; font-variant-numeric: tabular-nums; }
     .finds li::before { content: ""; width: 15px; height: 15px; flex: none; background: var(--gold); -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5z'/%3E%3C/svg%3E") center/contain no-repeat; transform: rotate(45deg); }
 
     /* Monitoramento: texto e cartão lado a lado */
-    .monitoring { padding: 96px 0 100px; border-top: 1px solid var(--line); background: radial-gradient(45% 60% at 80% 50%, rgba(255, 186, 40, .07), transparent 70%), var(--bg); }
+    .monitoring { padding: 96px 0 100px; border-top: 1px solid var(--line); background: radial-gradient(45% 60% at 80% 50%, rgba(240, 190, 90, .04), transparent 70%), var(--bg); }
     .monitoring__inner { display: grid; grid-template-columns: 1.05fr 1fr; gap: 56px; align-items: center; }
     .monitoring h2 { font-family: Sora, Manrope, sans-serif; font-weight: 800; font-size: clamp(28px, 3.4vw, 42px); line-height: 1.12; letter-spacing: -.025em; text-wrap: balance; }
     .monitoring .texto p { color: var(--muted); font-size: 18px; margin-top: 16px; max-width: 30em; }
@@ -77,7 +77,7 @@
     .monitoring .btn { margin-top: 30px; }
     .card { position: relative; border-radius: 20px; padding: 34px 32px 36px; background: linear-gradient(180deg, #101821, var(--panel)); border: 1px solid var(--line); box-shadow: 0 30px 70px -30px rgba(0, 0, 0, .8); overflow: hidden; }
     .card::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 3px; background: linear-gradient(90deg, transparent, var(--gold), transparent); }
-    .radar { width: 64px; height: 64px; border-radius: 16px; display: grid; place-items: center; background: rgba(255, 200, 61, .1); border: 1px solid rgba(255, 200, 61, .35); }
+    .radar { width: 64px; height: 64px; border-radius: 16px; display: grid; place-items: center; background: rgba(240, 193, 90, .08); border: 1px solid rgba(240, 193, 90, .3); }
     .radar svg { width: 34px; height: 34px; color: var(--gold); }
     .card h3 { font-family: Sora, Manrope, sans-serif; font-size: 22px; font-weight: 700; margin-top: 20px; }
     .card p { color: var(--muted); margin-top: 10px; }
@@ -87,7 +87,7 @@
     .faq h2 { font-family: Sora, Manrope, sans-serif; font-weight: 800; font-size: clamp(26px, 3vw, 36px); letter-spacing: -.02em; text-align: center; }
     .faq__list { max-width: 760px; margin: 36px auto 0; display: grid; gap: 12px; }
     details { border-radius: 14px; background: var(--panel); border: 1px solid var(--line); transition: border-color .2s; }
-    details[open] { border-color: rgba(255, 200, 61, .45); }
+    details[open] { border-color: rgba(240, 193, 90, .4); }
     summary { list-style: none; cursor: pointer; padding: 18px 22px; font-weight: 800; font-size: 16.5px; display: flex; justify-content: space-between; align-items: center; gap: 16px; }
     summary::-webkit-details-marker { display: none; }
     summary::after { content: "+"; color: var(--gold); font-size: 24px; line-height: 1; transition: transform .2s; }
@@ -101,8 +101,8 @@
       body { font-size: 16px; }
       .faixa { font-size: 12px; letter-spacing: .05em; }
       .hero__inner { padding: 18px 0 64px; }
-      .brand img { width: 64px; }
-      h1 { font-size: clamp(27px, 7.8vw, 34px); margin-top: 12px; }
+      .brand img { width: 58px; }
+      h1 { font-size: clamp(27px, 7.8vw, 34px); margin-top: 18px; }
       .hero__copy p { font-size: 16px; margin-top: 12px; }
       .btn { width: 100%; padding: 0 18px; font-size: 17.5px; }
       .hero .btn { margin-top: 22px; }
@@ -134,7 +134,7 @@
 
       <div class="shell hero__inner">
         <a class="brand" href="#top" aria-label="Central de Voos">
-          <img src="logo.png" alt="Central de Voos" width="84" height="84">
+          <img src="logo-cdv.png" alt="Central de Voos" width="240" height="275">
         </a>
 
         <div class="hero__copy">
