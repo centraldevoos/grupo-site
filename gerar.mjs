@@ -24,10 +24,10 @@ const AVISO_VISITA = "https://centraldevoos-marketing.vercel.app/api/entrar/visi
 const CLARITY = "yjvtya7ic9";
 
 /** caminho no site → nome do canal no CDV Marketing (o mesmo do /entrar/<canal>). */
-// Split ENCERRADO em 05/11 às 22h27 (decisão do dono): quem ia pelo Tintim
-// recebia o fluxo da conversa E o diagnóstico de quem entra no grupo. Todo
-// mundo volta direto ao Sendflow. Os links ficam aqui para registro.
-const SPLIT_LIGADO = false;
+// Split pausado em 05/11 22h27 (o braço Tintim recebia fluxo + diagnóstico) e
+// RELIGADO na mesma noite, depois de o dono corrigir o envio duplo.
+// SPLIT_LIGADO = false manda todo mundo direto ao Sendflow.
+const SPLIT_LIGADO = true;
 const TINTIM = "https://tintim.link/whatsapp/5e1595d4-a3db-4084-848f-87f553f347ab/";
 const PAGINAS = [
   { caminho: "grupo", canal: "bio-insta", pasta: ".", tintim: TINTIM + "f58aa109-d2a8-4f41-9822-37de0a35c04c" }, // split bio insta
